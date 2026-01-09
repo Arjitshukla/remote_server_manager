@@ -1,0 +1,27 @@
+services:
+  ssh-server:
+    image: ubuntu:20.04
+    container_name: ssh_test_server
+    ports:
+      - "2222:22"
+    stdin_open: true
+    tty: true
+    environment:
+      DEBIAN_FRONTEND: noninteractive
+    command: >
+      bash -c "
+      apt update &&
+      apt install -y openssh-server sudo tzdata &&
+      mkdir /var/run/sshd &&
+      echo 'root:root123' | chpasswd &&
+      sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config &&
+      /usr/sbin/sshd -D
+      "
+
+# {
+#   "id": 2,
+#   "name": "Docker SSH Server",
+#   "host": "127.0.0.1",
+#   "username": "root",
+#   "password": "root123"
+# }

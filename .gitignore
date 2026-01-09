@@ -1,0 +1,138 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+*.egg
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
+nose2-junit.xml
+coverage.xml
+htmlcov/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# poetry
+poetry.lock
+
+# virtualenv
+venv/
+ENV/
+.env/
+.venv/
+env/
+venv.bak/
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+*.iml
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Environment variables / secrets
+.env
+.env.*
+
+# Logs
+logs/
+*.log
+
+# Migrations
+*/migrations/*.py
+*/migrations/*.pyc
+
+# Docker
+# Ignore containers, images and compose override files often generated locally
+.docker/
+docker-compose.override.yml
+docker-compose.override.yaml
+
+# Node modules (if frontend present)
+node_modules/
+
+# SSH keys
+id_rsa
+id_rsa.pub
+
+# Temporary files
+*.swp
+*~
+.cache/
+
+# Coverage and report artifacts
+.coverage
+coverage.xml
+
+# SQLite DBs
+*.db
+*.sqlite3
+
+# Build artifacts
+*.pyc
+*.pyo
+*.orig
