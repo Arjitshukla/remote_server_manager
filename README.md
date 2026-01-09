@@ -1,10 +1,97 @@
 # Remote Server Manager API
+A production-ready backend REST API to manage remote Linux servers via SSH, with authentication, command execution, logging, and email notifications.
 
-## Features
-- User Authentication (JWT)
-- Server CRUD (Add / List / Delete)
-- SSH Command Execution
-- Command Logging
+
+
+## Implemented Features
+
+### 1️ User Authentication
+- JWT-based user registration and login  
+- Secure password hashing using **bcrypt**
+
+---
+
+### 2️ Server Management
+- CRUD APIs for managing remote servers  
+  - Add Server  
+  - List Servers  
+  - Delete Server  
+- User Profile APIs  
+  - Setup Profile  
+  - Get Profile  
+  - Update Profile  
+  - Delete Profile  
+
+---
+
+### 3️ SSH Command Execution
+- SSH connection using **Paramiko**
+- Execute shell commands on remote servers
+- Returns:
+  - Command output  
+  - Error output  
+  - Exit status  
+- Dangerous commands are blocked:
+  - `rm -rf`
+  - `shutdown`
+  - `reboot`
+  - fork bombs
+
+---
+
+### 4️ Command Logging
+- Every executed command is logged in the database
+- Stored details:
+  - User email
+  - Server name
+  - Command
+  - Output
+  - Error
+  - Timestamp
+
+---
+
+### 5️ Email Notification
+- Integrated with **SendGrid**
+- Sends email notification after every command execution
+- Email includes:
+  - User details
+  - Server name
+  - Executed command
+  - Output
+  - Error
+  - Exit status
+
+---
+
+### 6️ Docker SSH Test Server
+- Docker-based SSH server for testing
+- Ubuntu 20.04 container
+- SSH exposed on port **2222**
+- Used for validating SSH command execution
+
+---
+
+### 7️ Documentation
+- Proper `README.md` file included
+- Swagger UI available for API testing
+
+---
+
+##  Tech Stack
+- **FastAPI**
+- **SQLAlchemy**
+- **JWT Authentication**
+- **Paramiko**
+- **SendGrid**
+- **Docker**
+- **SQLite / PostgreSQL**
+
+---
+
+## 📘 API Documentation
+- Swagger UI:  
+
 
 ## Setup
 1. Clone repo
@@ -41,3 +128,6 @@ SENDGRID_API_KEY=<"you api key">
 
 ## Images
 ![Medical Diagram](./app/static/Images/demo.png)
+# Remote Server Manager API
+
+---
